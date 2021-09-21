@@ -76,12 +76,20 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: false
      */
     func duplicateTest() {
-        
+        print(containsDuplicate([1,2,3,1]))
     }
     
-//    func containsDuplicate(_ nums: [Int]) -> Bool {
-//            
-//    }
+    func containsDuplicate(_ nums: [Int]) -> Bool {
+        var numSet: Set<Int> = []
+        for num in nums {
+            numSet.insert(num)
+        }
+        if numSet.count != nums.count {
+            return true
+        }else {
+            return false
+        }
+    }
     
     // MARK: - Merge Sorted Array
     /*
@@ -128,12 +136,20 @@ class AlgoruthmManager: AlgorithmProtocol {
 
      */
     func missingNumberTest() {
-        
+        print(missingNumber([3,0,1]))
     }
     
-//    private func missingNumber(_ nums: [Int]) -> Int {
-//
-//    }
-    
-    
+    private func missingNumber(_ nums: [Int]) -> Int {
+        let maxNum = nums.max()
+        let minNum = nums.min()
+        if let min = minNum,
+           let max = maxNum {
+            for intNum in min...max {
+                if !nums.contains(intNum) {
+                    return intNum
+                }
+            }
+        }
+        return Int()
+    }
 }

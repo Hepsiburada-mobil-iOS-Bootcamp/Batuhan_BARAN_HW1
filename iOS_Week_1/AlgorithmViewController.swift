@@ -36,7 +36,7 @@ class AlgorithmViewController: UIViewController {
     }
     
     @IBAction func duplicationAction(_ sender: Any) {
-    
+        algorithmManager?.duplicateTest()
     }
     
     @IBAction func mergeArrayAction(_ sender: Any) {
@@ -44,7 +44,7 @@ class AlgorithmViewController: UIViewController {
     }
     
     @IBAction func missingNumberAction(_ sender: Any) {
-        // call required test function
+        algorithmManager?.missingNumberTest()
     }
     
     @IBAction func arrayIntersectionAction(_ sender: Any) {
