@@ -9,7 +9,8 @@ import UIKit
 
 class AlgorithmViewController: UIViewController {
     
-    private var algorithmManager: AlgorithmProtocol!
+    //this variable did not set yet and was forced I setted it before going here and made optional😄
+    var algorithmManager: AlgorithmProtocol?
 
     convenience init(algorithmManager: AlgorithmProtocol) {
         self.init()
@@ -23,11 +24,11 @@ class AlgorithmViewController: UIViewController {
     }
     
     @IBAction func twoSumAction(_ sender: Any) {
-        // algorithmManager.twoSumTest()
+        algorithmManager?.twoSumTest()
     }
     
     @IBAction func isPalindromAction(_ sender: Any) {
-        // call required test function
+        algorithmManager?.isPalindromTest()
     }
     
     @IBAction func AnagramAction(_ sender: Any) {
@@ -35,7 +36,7 @@ class AlgorithmViewController: UIViewController {
     }
     
     @IBAction func duplicationAction(_ sender: Any) {
-        // call required test function
+    
     }
     
     @IBAction func mergeArrayAction(_ sender: Any) {

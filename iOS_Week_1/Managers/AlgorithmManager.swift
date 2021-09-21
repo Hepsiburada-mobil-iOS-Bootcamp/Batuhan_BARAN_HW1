@@ -39,12 +39,19 @@ class AlgoruthmManager: AlgorithmProtocol {
      Explanation: "amanaplanacanalpanama" is a palindrome.
      */
     func isPalindromTest() {
-        
+        print(isPalindrome("A man, a plan, a canal: Panama"))
     }
     
-//    func isPalindrome(_ s: String) -> Bool {
-//
-//    }
+    func isPalindrome(_ s: String) -> Bool {
+        let pattern = "[^A-Za-z0-9]+"
+        let alphaNumericInput = s.replacingOccurrences(of: pattern, with: "", options: [.regularExpression])
+        let alphanumbericReversedInput = String(s.reversed()).replacingOccurrences(of: pattern, with: "", options: [.regularExpression])
+        if alphaNumericInput.lowercased() == alphanumbericReversedInput.lowercased() {
+            return true
+        }else {
+            return false
+        }
+    }
     
     // MARK: - Valid Anagram
     /*

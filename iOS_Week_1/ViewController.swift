@@ -15,12 +15,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func goToAlgorithmPage(_ sender: Any) {
-        
-        guard let viewController = storyboard?.instantiateViewController(identifier: "AlgorithmViewController") else {
+        let algorithmManager = AlgoruthmManager()
+        guard let viewController = storyboard?.instantiateViewController(identifier: "AlgorithmViewController") as? AlgorithmViewController else {
             fatalError("Opps there is no such viewController")
         }
+        viewController.algorithmManager = algorithmManager
         self.navigationController?.pushViewController(viewController, animated: true)
-        
     }
     
     @IBAction func basicsTest(_ sender: Any) {
