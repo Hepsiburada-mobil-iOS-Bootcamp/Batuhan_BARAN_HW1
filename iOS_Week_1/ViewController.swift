@@ -30,7 +30,5 @@ class ViewController: UIViewController {
         let classObj = SampleClass(name: "name", surName: "surname").setTitleObject(by: structObj)
         classObj.display()
     }
-
-    
 }
 

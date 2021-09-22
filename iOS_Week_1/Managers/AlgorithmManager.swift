@@ -60,12 +60,12 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: true
      */
     func isAnagramTest() {
-        
+        print(isAnagram("anagram", "nagaram"))
     }
     
-//    func isAnagram(_ s: String, _ t: String) -> Bool {
-//
-//    }
+    func isAnagram(_ s: String, _ t: String) -> Bool {
+        return s.lowercased().sorted() == t.lowercased().sorted()
+    }
     
     // MARK: - Contains Duplicate
     /*
