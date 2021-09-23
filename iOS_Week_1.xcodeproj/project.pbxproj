@@ -22,6 +22,7 @@
 		A7CF0A8126F7CECE0049FA45 /* SampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A8026F7CECE0049FA45 /* SampleClass.swift */; };
 		A7CF0A8326F7CED40049FA45 /* SampleStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A8226F7CED40049FA45 /* SampleStruct.swift */; };
 		A7CF0A8526F7CFD60049FA45 /* SampleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A8426F7CFD60049FA45 /* SampleEnum.swift */; };
+		D82BE96826FCAE7100F942F4 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BE96726FCAE7100F942F4 /* Point.swift */; };
 		D88811F326FBCC1F0073FDC3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88811F226FBCC1F0073FDC3 /* Person.swift */; };
 		D88811F526FBCCC90073FDC3 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88811F426FBCCC90073FDC3 /* Gender.swift */; };
 		D88811F726FBCD4A0073FDC3 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88811F626FBCD4A0073FDC3 /* Student.swift */; };
@@ -68,6 +69,7 @@
 		A7CF0A8026F7CECE0049FA45 /* SampleClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleClass.swift; sourceTree = "<group>"; };
 		A7CF0A8226F7CED40049FA45 /* SampleStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleStruct.swift; sourceTree = "<group>"; };
 		A7CF0A8426F7CFD60049FA45 /* SampleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleEnum.swift; sourceTree = "<group>"; };
+		D82BE96726FCAE7100F942F4 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		D88811F226FBCC1F0073FDC3 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		D88811F426FBCCC90073FDC3 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 		D88811F626FBCD4A0073FDC3 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 		D88811FC26FBCFC30073FDC3 /* MyStruct */ = {
 			isa = PBXGroup;
 			children = (
+				D82BE96726FCAE7100F942F4 /* Point.swift */,
 			);
 			path = MyStruct;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D82BE96826FCAE7100F942F4 /* Point.swift in Sources */,
 				D88811FF26FBD00E0073FDC3 /* Lesson.swift in Sources */,
 				D88811F526FBCCC90073FDC3 /* Gender.swift in Sources */,
 				A7CF0A7526F7C0680049FA45 /* AlgorithmViewController.swift in Sources */,
