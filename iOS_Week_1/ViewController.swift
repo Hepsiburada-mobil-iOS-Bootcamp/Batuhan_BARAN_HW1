@@ -31,9 +31,9 @@ class ViewController: UIViewController {
 //        classObj.display()
 
         // MARK:- Struct Sample
-        let point1 = Point(x: 3, y: 2)
-        let point2 = Point(x: 7, y: 8)
-        print(point1.calculateDistanceOfPoints(firstPoint: point1, secondPoint: point2))
+        let firstPoint = Point(x: 3, y: 2)
+        let secondPoint = Point(x: 7, y: 8)
+        print(Point.shared.calculateDistanceOfPoints(firstPoint: firstPoint, secondPoint: secondPoint))
         print("\n")
         
         // MARK:- Class Sample
