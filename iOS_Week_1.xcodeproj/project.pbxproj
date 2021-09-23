@@ -22,6 +22,12 @@
 		A7CF0A8126F7CECE0049FA45 /* SampleClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A8026F7CECE0049FA45 /* SampleClass.swift */; };
 		A7CF0A8326F7CED40049FA45 /* SampleStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A8226F7CED40049FA45 /* SampleStruct.swift */; };
 		A7CF0A8526F7CFD60049FA45 /* SampleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF0A8426F7CFD60049FA45 /* SampleEnum.swift */; };
+		D82BE96826FCAE7100F942F4 /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82BE96726FCAE7100F942F4 /* Point.swift */; };
+		D88811F326FBCC1F0073FDC3 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88811F226FBCC1F0073FDC3 /* Person.swift */; };
+		D88811F526FBCCC90073FDC3 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88811F426FBCCC90073FDC3 /* Gender.swift */; };
+		D88811F726FBCD4A0073FDC3 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88811F626FBCD4A0073FDC3 /* Student.swift */; };
+		D88811F926FBCF560073FDC3 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88811F826FBCF560073FDC3 /* Teacher.swift */; };
+		D88811FF26FBD00E0073FDC3 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88811FE26FBD00E0073FDC3 /* Lesson.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +69,12 @@
 		A7CF0A8026F7CECE0049FA45 /* SampleClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleClass.swift; sourceTree = "<group>"; };
 		A7CF0A8226F7CED40049FA45 /* SampleStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleStruct.swift; sourceTree = "<group>"; };
 		A7CF0A8426F7CFD60049FA45 /* SampleEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleEnum.swift; sourceTree = "<group>"; };
+		D82BE96726FCAE7100F942F4 /* Point.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
+		D88811F226FBCC1F0073FDC3 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		D88811F426FBCCC90073FDC3 /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		D88811F626FBCD4A0073FDC3 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		D88811F826FBCF560073FDC3 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
+		D88811FE26FBD00E0073FDC3 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,11 +170,73 @@
 		A7CF0A7B26F7CDC20049FA45 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D88811FC26FBCFC30073FDC3 /* MyStruct */,
+				D88811FB26FBCF9F0073FDC3 /* MyEnum */,
+				D88811FA26FBCF980073FDC3 /* MyClasses */,
 				A7CF0A8026F7CECE0049FA45 /* SampleClass.swift */,
 				A7CF0A8226F7CED40049FA45 /* SampleStruct.swift */,
 				A7CF0A8426F7CFD60049FA45 /* SampleEnum.swift */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		D88811EF26FBCBFC0073FDC3 /* Teacher */ = {
+			isa = PBXGroup;
+			children = (
+				D88811F826FBCF560073FDC3 /* Teacher.swift */,
+			);
+			path = Teacher;
+			sourceTree = "<group>";
+		};
+		D88811F026FBCC0E0073FDC3 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				D88811F626FBCD4A0073FDC3 /* Student.swift */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
+		D88811F126FBCC170073FDC3 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				D88811F226FBCC1F0073FDC3 /* Person.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		D88811FA26FBCF980073FDC3 /* MyClasses */ = {
+			isa = PBXGroup;
+			children = (
+				D88811FD26FBD0010073FDC3 /* Lesson */,
+				D88811F126FBCC170073FDC3 /* Person */,
+				D88811F026FBCC0E0073FDC3 /* Student */,
+				D88811EF26FBCBFC0073FDC3 /* Teacher */,
+			);
+			path = MyClasses;
+			sourceTree = "<group>";
+		};
+		D88811FB26FBCF9F0073FDC3 /* MyEnum */ = {
+			isa = PBXGroup;
+			children = (
+				D88811F426FBCCC90073FDC3 /* Gender.swift */,
+			);
+			path = MyEnum;
+			sourceTree = "<group>";
+		};
+		D88811FC26FBCFC30073FDC3 /* MyStruct */ = {
+			isa = PBXGroup;
+			children = (
+				D82BE96726FCAE7100F942F4 /* Point.swift */,
+			);
+			path = MyStruct;
+			sourceTree = "<group>";
+		};
+		D88811FD26FBD0010073FDC3 /* Lesson */ = {
+			isa = PBXGroup;
+			children = (
+				D88811FE26FBD00E0073FDC3 /* Lesson.swift */,
+			);
+			path = Lesson;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,15 +369,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D82BE96826FCAE7100F942F4 /* Point.swift in Sources */,
+				D88811FF26FBD00E0073FDC3 /* Lesson.swift in Sources */,
+				D88811F526FBCCC90073FDC3 /* Gender.swift in Sources */,
 				A7CF0A7526F7C0680049FA45 /* AlgorithmViewController.swift in Sources */,
 				A7CF0A7826F7C5EB0049FA45 /* AlgorithmManager.swift in Sources */,
 				A7CF0A4526F7BEBF0049FA45 /* ViewController.swift in Sources */,
 				A7CF0A4B26F7BEBF0049FA45 /* iOS_Week_1.xcdatamodeld in Sources */,
+				D88811F326FBCC1F0073FDC3 /* Person.swift in Sources */,
 				A7CF0A8326F7CED40049FA45 /* SampleStruct.swift in Sources */,
+				D88811F726FBCD4A0073FDC3 /* Student.swift in Sources */,
 				A7CF0A8126F7CECE0049FA45 /* SampleClass.swift in Sources */,
 				A7CF0A4126F7BEBF0049FA45 /* AppDelegate.swift in Sources */,
 				A7CF0A4326F7BEBF0049FA45 /* SceneDelegate.swift in Sources */,
 				A7CF0A8526F7CFD60049FA45 /* SampleEnum.swift in Sources */,
+				D88811F926FBCF560073FDC3 /* Teacher.swift in Sources */,
 				A7CF0A7A26F7C5F50049FA45 /* AlgorithmProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
