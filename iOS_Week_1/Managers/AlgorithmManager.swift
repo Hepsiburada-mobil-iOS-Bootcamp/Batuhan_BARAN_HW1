@@ -27,8 +27,36 @@ class AlgoruthmManager: AlgorithmProtocol {
     }
     
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-        // I solved of the question for you guys :D :D :D
-        return [0, 1]
+        //şimdilik çalışmıyor ama sonra tekrar bakıcam :)
+        if nums.count % 2 == 0 {
+            let chunks = stride(from: 0, to: nums.count, by: 2).map {
+                Array(nums[$0..<min($0 + 2, nums.count)])
+            }
+            for chunk in chunks {
+                if chunk[0] + chunk[1] == target {
+                    print("yesy")
+                    if let firstIdx = nums.firstIndex(where:  { $0 == chunk[0] }) {
+                        print(firstIdx)
+                    }
+                    if let secondIdx = nums.firstIndex(where:  { $0 == chunk[1] }) {
+                        print(secondIdx)
+                    }
+                }else {
+                }
+            }
+            let chunkFirst = chunks[0].first
+            let chunkLast = chunks[1].last
+            if (chunkFirst ?? 0) + (chunkLast ?? 0) == target {
+
+                if let firstIdx = nums.firstIndex(where:  { $0 == chunkFirst}) {
+                    print(firstIdx)
+                }
+                if let secondIdx = nums.firstIndex(where:  { $0 == chunkLast }) {
+                    print(secondIdx)
+                }
+            }
+        }
+        return [Int]()
     }
     
     // MARK: - IsPalindrome
@@ -39,12 +67,19 @@ class AlgoruthmManager: AlgorithmProtocol {
      Explanation: "amanaplanacanalpanama" is a palindrome.
      */
     func isPalindromTest() {
-        
+        print(isPalindrome("A man, a plan, a canal: Panama"))
     }
     
-//    func isPalindrome(_ s: String) -> Bool {
-//
-//    }
+    func isPalindrome(_ s: String) -> Bool {
+        let pattern = "[^A-Za-z0-9]+"
+        let alphaNumericInput = s.replacingOccurrences(of: pattern, with: "", options: [.regularExpression])
+        let alphanumbericReversedInput = String(s.reversed()).replacingOccurrences(of: pattern, with: "", options: [.regularExpression])
+        if alphaNumericInput.lowercased() == alphanumbericReversedInput.lowercased() {
+            return true
+        }else {
+            return false
+        }
+    }
     
     // MARK: - Valid Anagram
     /*
@@ -53,12 +88,12 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: true
      */
     func isAnagramTest() {
-        
+        print(isAnagram("anagram", "nagaram"))
     }
     
-//    func isAnagram(_ s: String, _ t: String) -> Bool {
-//
-//    }
+    func isAnagram(_ s: String, _ t: String) -> Bool {
+        return s.lowercased().sorted() == t.lowercased().sorted()
+    }
     
     // MARK: - Contains Duplicate
     /*
@@ -69,19 +104,29 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: false
      */
     func duplicateTest() {
-        
+        print(containsDuplicate([1,2,3,1]))
     }
     
-//    func containsDuplicate(_ nums: [Int]) -> Bool {
-//            
-//    }
+    func containsDuplicate(_ nums: [Int]) -> Bool {
+        var numSet: Set<Int> = []
+        for num in nums {
+            numSet.insert(num)
+        }
+        if numSet.count != nums.count {
+            return true
+        }else {
+            return false
+        }
+    }
     
     // MARK: - Merge Sorted Array
     /*
-    
      You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
      Merge nums1 and nums2 into a single array sorted in non-decreasing order.
-     The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+     
+     The final sorted array should not be returned by the function, but instead be stored inside the array nums1.
+     
+     To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
      
      Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
      Output: [1,2,2,3,5,6]
@@ -89,11 +134,17 @@ class AlgoruthmManager: AlgorithmProtocol {
      The result of the merge is [1,2,2,3,5,6] with the underlined elements coming from nums1.
      */
     func mergeArraysTest() {
-        
+        var nums1 = [1,2,3,0,0,0]
+        let nums2 = [2,5,6,0,0]
+        merge(&nums1, nums1.count, nums2, nums2.count)
     }
     
     private func merge(_ nums1: inout [Int], _ m: Int, _ nums2: [Int], _ n: Int) {
-            
+        for num2 in nums2 {
+            nums1.append(num2)
+        }
+        nums1 = nums1.filter({ $0 != 0 })
+        print(nums1.sorted())
     }
     
     // MARK: - Intersection of Two Arrays
@@ -104,12 +155,12 @@ class AlgoruthmManager: AlgorithmProtocol {
      Output: [2,2]
      */
     func arrayIntersectionTest() {
-        
+        print(intersect([1,2,2,1], [2,2]))
     }
     
-//    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
-//
-//    }
+    func intersect(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+        return nums2.filter({nums1.contains($0)})
+    }
     
     // MARK: - Missing Number
     /*
@@ -121,12 +172,20 @@ class AlgoruthmManager: AlgorithmProtocol {
 
      */
     func missingNumberTest() {
-        
+        print(missingNumber([3,0,1]))
     }
     
-//    private func missingNumber(_ nums: [Int]) -> Int {
-//
-//    }
-    
-    
+    private func missingNumber(_ nums: [Int]) -> Int {
+        let maxNum = nums.max()
+        let minNum = nums.min()
+        if let min = minNum,
+           let max = maxNum {
+            for intNum in min...max {
+                if !nums.contains(intNum) {
+                    return intNum
+                }
+            }
+        }
+        return Int()
+    }
 }
