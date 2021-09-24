@@ -27,8 +27,36 @@ class AlgoruthmManager: AlgorithmProtocol {
     }
     
     private func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-        // I solved of the question for you guys :D :D :D
-        return [0, 1]
+        //şimdilik çalışmıyor ama sonra tekrar bakıcam :)
+        if nums.count % 2 == 0 {
+            let chunks = stride(from: 0, to: nums.count, by: 2).map {
+                Array(nums[$0..<min($0 + 2, nums.count)])
+            }
+            for chunk in chunks {
+                if chunk[0] + chunk[1] == target {
+                    print("yesy")
+                    if let firstIdx = nums.firstIndex(where:  { $0 == chunk[0] }) {
+                        print(firstIdx)
+                    }
+                    if let secondIdx = nums.firstIndex(where:  { $0 == chunk[1] }) {
+                        print(secondIdx)
+                    }
+                }else {
+                }
+            }
+            let chunkFirst = chunks[0].first
+            let chunkLast = chunks[1].last
+            if (chunkFirst ?? 0) + (chunkLast ?? 0) == target {
+
+                if let firstIdx = nums.firstIndex(where:  { $0 == chunkFirst}) {
+                    print(firstIdx)
+                }
+                if let secondIdx = nums.firstIndex(where:  { $0 == chunkLast }) {
+                    print(secondIdx)
+                }
+            }
+        }
+        return [Int]()
     }
     
     // MARK: - IsPalindrome
