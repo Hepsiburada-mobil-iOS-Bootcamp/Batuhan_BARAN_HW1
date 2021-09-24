@@ -10,7 +10,7 @@ import UIKit
 class AlgorithmViewController: UIViewController {
     
     //this variable did not set yet and was forced I setted it before going here and made optional😄
-    var algorithmManager: AlgorithmProtocol?
+    var algorithmManager: AlgorithmProtocol? // || var algorithmManager: AlgorithmProtocol? = AlgoruthmManager()
 
     convenience init(algorithmManager: AlgorithmProtocol) {
         self.init()
